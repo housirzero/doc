@@ -1,0 +1,9 @@
+之前如果建立 ssh 连接,
+只要將公鑰複製到 ~/.ssh/authorized_keys 就可以利用金鑰登入
+而不需要建立密碼.
+
+現在的 ssh 使用同樣的方法會出現錯誤訊息
+Agent admitted failure to sign using the key
+
+解決方式 使用 ssh-add 指令將私鑰 加進來 （根据个人的密匙命名不同更改 id_rsa）
+# ssh-add   ~/.ssh/id_rsa  
